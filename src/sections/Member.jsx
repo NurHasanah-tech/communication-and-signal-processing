@@ -17,14 +17,11 @@ function Member() {
   const [kategori, setKategori] = useState('peneliti');
 
   useEffect(() => {
-    const handleKategoriChange = () => {
-      const storedKategori = localStorage.getItem('kategori');
-      if (storedKategori === 'all') {
-        setKategori('all');
-      }
+    const handleKategoriChange = (e) => {
+      const selected = e.detail;
+      setKategori(selected);
     };
 
-    // Dengarkan event custom dari Navbar
     window.addEventListener('kategoriChange', handleKategoriChange);
 
     return () => {
@@ -35,17 +32,16 @@ function Member() {
 
 
 
+
   const isAllFromNavbar = kategori === 'all';
   const isManualShowAll = kategori === 'peneliti' && showAllManual;
 
-  const showAll = isAllFromNavbar || isManualShowAll;
-  const showPeneliti = kategori === 'peneliti' || showAll;
-  const showMagang = showAll;
-  const showFinalProject = showAll;
-  const showMBKM = showAll;
-  const showVisittingResearch = showAll;
-  const showfirstYearStudent = showAll;
-  const showResearchAsisten = showAll;
+  const showPeneliti = kategori === 'peneliti' || kategori === 'all';
+  const showVisittingResearch = kategori === 'visitingResearch' || kategori === 'all';
+  const showMagang = kategori === 'magang' || kategori === 'all';
+  const showFinalProject = kategori === 'finalProject' || kategori === 'all';
+  const showMBKM = kategori === 'mbkm' || kategori === 'all';
+
 
   return (
     <div>

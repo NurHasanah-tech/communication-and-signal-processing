@@ -67,13 +67,61 @@ function Navbar() {
                     All member
                   </a>
                 </li>
-                <li><a className="dropdown-item" href="#peneliti">Researchers</a></li>
-                <li><a className="dropdown-item" href="#visittingResearch">Visiting Researchers</a></li>
-                <li><a className="dropdown-item" href="#internship">Internship Students</a></li>
-                <li><a className="dropdown-item" href="#finalproject">Final Project</a></li>
-                <li><a className="dropdown-item" href="#mbkm">MBKM</a></li>
-                {/* <li><a className="dropdown-item" href="#student">Students</a></li> */}
-              </ul>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="#peneliti"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'peneliti' }));
+                    }}
+                  >
+                    Researchers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="#visittingResearch"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'visitingResearch' }));
+                    }}
+                  >
+                    Visiting Researchers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="#internship"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'magang' }));
+                    }}
+                  >
+                    Internship Students
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="#finalproject"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'finalProject' }));
+                    }}
+                  >
+                    Final Project
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="#mbkm"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'mbkm' }));
+                    }}
+                  >
+                    MBKM
+                  </a>
+                </li></ul>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
