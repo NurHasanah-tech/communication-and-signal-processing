@@ -33,16 +33,9 @@ export default function App() {
         <div className="header-content">
           <h1
             className={`fade-kiri ${visible ? "visible" : ""}`}
-            style={{ transitionDelay: "0.2s", fontSize: "5rem" }}
           >
             {title}
           </h1>
-          <p
-            className={`fade-kiri ${visible ? "visible" : ""}`}
-            style={{ transitionDelay: "0.5s" }}
-          >
-            {description}
-          </p>
         </div>
       </header>
     </div>
