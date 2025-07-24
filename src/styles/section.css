@@ -1,0 +1,85 @@
+.section-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section-image {
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;
+  display: block;
+  margin-top: 20px;
+}
+
+.text {
+  flex: 1;
+  max-width: 500px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ini penting: buat paragraf ke-2 dst agar turun ke bawah */
+.text p:not(:first-of-type) {
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+
+.full-width-section {
+  width: 100vw;
+  background-color: white;
+  margin-left: calc(-50vw + 50%);
+  padding: 60px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-image {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .text {
+    width: 90%;
+    max-width: none;
+    margin-top: 20px;
+    display: block; /* Ini ubah dari flex ke block agar teks normal */
+  }
+
+  .text p:not(:first-of-type) {
+    flex-basis: auto; /* reset basis agar tidak aneh */
+    margin-top: 20px;
+  }
+}
+
+
+.box-wrapper {
+  background: transparent; /* hilangkan warna latar */
+  border-radius: 0;         /* hilangkan sudut melengkung */
+  box-shadow: none;         /* hilangkan bayangan */
+  padding: 0;               /* hilangkan ruang dalam */
+  margin: 0;                /* hilangkan margin */
+  max-width: 100%;          /* biar ikut lebar kontainer */
+}
+/* Responsive agar padding tidak terlalu besar di mobile */
+@media (max-width: 768px) {
+  .box-wrapper {
+    padding: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}

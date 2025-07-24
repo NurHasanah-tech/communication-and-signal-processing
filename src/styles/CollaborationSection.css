@@ -1,0 +1,50 @@
+.collab-section {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.collab-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.collab-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.collab-masonry {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+.collab-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.collab-logo img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive: ubah jumlah kolom */
+@media (max-width: 900px) {
+  .collab-masonry {
+    column-count: 3;
+  }
+}
+@media (max-width: 600px) {
+  .collab-masonry {
+    column-count: 2;
+  }
+}

@@ -1,0 +1,66 @@
+.project-riset {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: none;
+}
+
+.project-riset h1 {
+  color: #f00000;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-riset h2 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.project-riset ul {
+  padding-left: 20px;
+}
+
+.project-riset ul li {
+  margin-bottom: 10px;
+}
+
+.project-riset .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-riset .gallery figure {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-riset .gallery figure:hover {
+  transform: translateY(-5px);
+}
+
+.project-riset .gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-riset .gallery figcaption {
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #ff2727;
+  text-align: center;
+  background-color: #fff;
+  font-weight: 500;
+}

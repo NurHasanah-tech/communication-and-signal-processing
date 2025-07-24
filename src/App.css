@@ -1,0 +1,13 @@
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    /* border: 2px dashed red;  */
+  }
+  
+  body {
+    transform: none !important;
+    overflow-x: hidden;
+  }
+  
