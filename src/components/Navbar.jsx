@@ -60,11 +60,10 @@ function Navbar() {
                     className="dropdown-item"
                     href="#peneliti"
                     onClick={() => {
-                      localStorage.setItem('kategori', 'all');
-                      window.dispatchEvent(new Event('kategoriChange'));
+                      window.dispatchEvent(new CustomEvent('kategoriChange', { detail: 'all' }));
                     }}
                   >
-                    All member
+                    All Member
                   </a>
                 </li>
                 <li>
@@ -121,7 +120,10 @@ function Navbar() {
                   >
                     MBKM
                   </a>
-                </li></ul>
+                </li>
+                
+
+              </ul>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
